@@ -4,6 +4,8 @@ description = "MYSQL config buntu"
 author = "Justin Napolitano"
 tags = ['python', "mysql","databases"]
 images = ["images/featured-caesar.jpg"]
+lastMod = [":git"]
+date = ["git"]
 +++
 
 
