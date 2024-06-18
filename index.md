@@ -1,6 +1,5 @@
 +++
 title =  "Configure mysql server on ubuntu"
-date = "2024-06-15"
 description = "MYSQL config buntu"
 author = "Justin Napolitano"
 tags = ['python', "mysql","databases"]
