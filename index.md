@@ -1,17 +1,14 @@
 +++
 title =  "Configure mysql server on ubuntu"
 description = "MYSQL config buntu"
-author = "Justin Napolitano"
 tags = ['python', "mysql","databases"]
-images = ["images/featured-caesar.jpg"]
-lastMod = [":git"]
-date = ["git"]
+images = ["images/feature-image.png"]
 +++
 
 
 ## Why
 
-I installed mysql in the previous post. now i need to setup users, create a db, and create a table.  
+I installed mysql in the previous post. Now I need to setup users, create a db, and create a table.  
    
 
 ### Parts of this series
@@ -28,47 +25,121 @@ I installed mysql in the previous post. now i need to setup users, create a db, 
 * [MYSQL config guide](https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing)
 
 
-## Install
+## Create a new user
 
-### Download the config files
+### Login as Root
 
-go to this link and download the script.
 
-```https://dev.mysql.com/downloads/repo/apt/```
+```bash 
 
-### Install the release package with dpkg
-
-> note that the w.x.y.z will change according to the release package
-
-run 
-
-```bash
-
-sudo dpkg -i mysql-apt-config_w.x.y-z_all.deb
-```
-
-in my case i ran 
-
-```bash
-
-sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb 
+mysql -u root -p
 
 ```
 
-### Update apt and install
+### Create some users
 
-so the package above just added the mysql repository to the apt package manager. to actually install we will run 
+In my case I will create 4 users accounts.  
 
-```bash
-sudo apt-get update &&  sudo apt-get install mysql-server
+1. Cobra@localhost
+2. Cobra@jnapolitano.com
+3. admin@localhost
+4. dummy@localhost
+
+```dummy is just used to test service connection and has not access grants or writes```
+
+``` sql
+
+CREATE USER 'cobra'@'localhost'
+  IDENTIFIED BY 'password';
+GRANT ALL
+  ON *.*
+  TO 'cobra'@'localhost'
+  WITH GRANT OPTION;
+
+ 
+
+CREATE USER 'admin'@'localhost'
+  IDENTIFIED BY 'password';
+GRANT RELOAD,PROCESS
+  ON *.*
+  TO 'admin'@'localhost';
+
+CREATE USER 'dummy'@'localhost';
+
 ```
 
-### Start mysql
+> ACTUALLY enter a password above. Do not use password as the user password'
 
-mysql will likely alrady be running post install. Check the status by running
 
-```bash
+### Logout of root
 
-systemctl status mysql
+enter ```EXIT``` in terminal
+
+### Login as your user
+
+In my case I pass ```mysql -u cobra -p``` back to the terminal.  
+
+## Create a DB 
+
+I will create a db for my personal website. The first command to run is
+
+```sql
+
+CREATE DATABASE jnapolitano;
 
 ```
+
+### Use your new db
+
+```sql
+
+USE jnapolitano;
+```
+
+### Create the posts table
+
+```sql 
+
+CREATE TABLE posts
+(
+  id                    BINARY(16) NOT NULL DEFAULT (UUID_TO_BIN(UUID())),  # Unique ID for the record. This a smallish and not a very high performance db this should be fine. 
+  author                BINARY(16),                                         # id of author
+  publish_date          DATE,                                               # publish date
+  description           VARCHAR(150),                                       # post description
+  link                  VARCHAR(150),                                       # Link to post
+  title                 VARCHAR(150),                                       # title of hte post
+  PRIMARY KEY           (id)                                                # Make the id the primary key
+);
+
+```
+
+### Create the authors table
+
+```sql
+
+CREATE TABLE authors
+(
+  id                    BINARY(16) NOT NULL DEFAULT (UUID_TO_BIN(UUID())),  # Unique ID for the record. This a smallish and not a very high performance db this should be fine. 
+  name                  VARCHAR(150),                                      # name of author
+  PRIMARY KEY           (id)                                                # Make the id the primary key
+);
+
+```
+
+
+### Create the mastodon post table
+
+I will be adding support for other systems. I am starting with mastodon. 
+
+```sql 
+
+CREATE TABLE mastodon_posts
+(
+  id                    BINARY(16) NOT NULL DEFAULT (UUID_TO_BIN(UUID())),  # Unique ID for the record. This a smallish and not a very high performance db this should be fine. 
+  post_id               BINARY(16),                                         # name of author
+  mastodon_post         VARCHAR(150),                                       # THE POST ID.. if it returns
+  PRIMARY KEY           (id)                                                # Make the id the primary key
+);
+
+```
+
