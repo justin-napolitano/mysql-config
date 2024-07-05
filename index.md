@@ -3,6 +3,7 @@ title =  "Configure mysql server on ubuntu"
 description = "MYSQL config buntu"
 tags = ['python', "mysql","databases"]
 images = ["images/feature-image.png"]
+date = "2024-06-27"
 +++
 
 
