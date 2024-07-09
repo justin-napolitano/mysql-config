@@ -4,7 +4,7 @@ description = "MYSQL config buntu"
 tags = ['python', "mysql","databases"]
 images = ["images/feature-image.png"]
 date = "2024-06-27"
-categories = ["Portfolio"]
+categories = ["projects"]
 series = ["Auto Post Hugo"]
 
 +++
