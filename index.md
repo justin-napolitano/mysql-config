@@ -22,6 +22,13 @@ seoSecondaryKeywords:
   - user permissions
   - ubuntu mysql setup
 seoOptimized: true
+topicFamily: devtools
+topicFamilyConfidence: 0.9
+topicFamilyNotes: >-
+  The post is a technical reference focused on MySQL configuration, schema design, and user
+  permission setup on Ubuntu, which aligns well with development environment setup and configuration
+  tools. It involves procedural setup and database management typical for devtool-related content
+  rather than automation pipelines or data science projects.
 ---
 
 # mysql-config: Technical Reference
@@ -63,4 +70,5 @@ The `index.md` file serves as a comprehensive guide for setting up MySQL on Ubun
 ## Conclusion
 
 This project consolidates the foundational elements required to configure and manage a MySQL database for personal content management on Ubuntu. It provides a clear, repeatable setup process and schema definitions, reducing setup friction and serving as a technical reference for future development or maintenance.
+
 
