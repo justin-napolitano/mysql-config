@@ -1,12 +1,28 @@
 ---
-slug: "github-mysql-config"
-title: "mysql-config"
-repo: "justin-napolitano/mysql-config"
-githubUrl: "https://github.com/justin-napolitano/mysql-config"
-generatedAt: "2025-11-23T09:18:33.059693Z"
-source: "github-auto"
+slug: github-mysql-config
+title: 'MySQL Config: Setup and Schema for Personal Content Management'
+repo: justin-napolitano/mysql-config
+githubUrl: https://github.com/justin-napolitano/mysql-config
+generatedAt: '2025-11-23T09:18:33.059693Z'
+source: github-auto
+summary: >-
+  Reference for configuring MySQL on Ubuntu with schema and user permissions for managing personal
+  website content including authors, posts, and feeds.
+tags:
+  - mysql
+  - database-configuration
+  - content-management
+  - ubuntu
+  - uuid
+  - sql-schema
+seoPrimaryKeyword: mysql configuration
+seoSecondaryKeywords:
+  - uuid primary keys
+  - content management
+  - user permissions
+  - ubuntu mysql setup
+seoOptimized: true
 ---
-
 
 # mysql-config: Technical Reference
 
@@ -47,3 +63,4 @@ The `index.md` file serves as a comprehensive guide for setting up MySQL on Ubun
 ## Conclusion
 
 This project consolidates the foundational elements required to configure and manage a MySQL database for personal content management on Ubuntu. It provides a clear, repeatable setup process and schema definitions, reducing setup friction and serving as a technical reference for future development or maintenance.
+
