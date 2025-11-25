@@ -1,13 +1,13 @@
 ---
 slug: github-mysql-config
-title: 'MySQL Config: Setup and Schema for Personal Content Management'
+title: Structured MySQL Configuration for Personal Websites
 repo: justin-napolitano/mysql-config
 githubUrl: https://github.com/justin-napolitano/mysql-config
 generatedAt: '2025-11-23T09:18:33.059693Z'
 source: github-auto
 summary: >-
-  Reference for configuring MySQL on Ubuntu with schema and user permissions for managing personal
-  website content including authors, posts, and feeds.
+  This guide provides a repeatable setup for MySQL database configuration
+  tailored for personal content management.
 tags:
   - mysql
   - database-configuration
@@ -15,20 +15,28 @@ tags:
   - ubuntu
   - uuid
   - sql-schema
-seoPrimaryKeyword: mysql configuration
-seoSecondaryKeywords:
-  - uuid primary keys
+  - database schema
   - content management
+  - sql scripts
   - user permissions
-  - ubuntu mysql setup
+seoPrimaryKeyword: mysql database configuration
+seoSecondaryKeywords:
+  - personal website database
+  - MySQL setup guide
+  - SQL user management
+  - content authorship database
+  - MySQL schema design
 seoOptimized: true
 topicFamily: devtools
 topicFamilyConfidence: 0.9
 topicFamilyNotes: >-
-  The post is a technical reference focused on MySQL configuration, schema design, and user
-  permission setup on Ubuntu, which aligns well with development environment setup and configuration
-  tools. It involves procedural setup and database management typical for devtool-related content
-  rather than automation pipelines or data science projects.
+  The post is a technical reference focused on MySQL configuration, schema
+  design, and user permission setup on Ubuntu, which aligns well with
+  development environment setup and configuration tools. It involves procedural
+  setup and database management typical for devtool-related content rather than
+  automation pipelines or data science projects.
+kind: project
+id: github-mysql-config
 ---
 
 # mysql-config: Technical Reference
