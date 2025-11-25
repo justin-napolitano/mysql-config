@@ -1,20 +1,25 @@
 ---
 slug: github-mysql-config
 id: github-mysql-config
-title: mysql-config
+title: MySQL Configuration Scripts for Personal Websites
 repo: justin-napolitano/mysql-config
 githubUrl: https://github.com/justin-napolitano/mysql-config
 generatedAt: '2025-11-24T21:35:38.633Z'
 source: github-auto
 summary: >-
-  A collection of SQL schema definitions and configuration scripts for setting
-  up and managing a MySQL server environment tailored for a personal website
-  database. This repository provides table definitions, user setup instructions,
-  and example configurations primarily targeting Ubuntu MySQL installations.
-tags: []
-seoPrimaryKeyword: ''
-seoSecondaryKeywords: []
-seoOptimized: false
+  A repository of SQL scripts and configurations for managing a MySQL server
+  tailored for personal website databases.
+tags:
+  - mysql
+  - ubuntu
+seoPrimaryKeyword: mysql configuration scripts
+seoSecondaryKeywords:
+  - mysql server setup
+  - ubuntu mysql installation
+  - sql schema definitions
+  - user management in mysql
+  - personal website database
+seoOptimized: true
 topicFamily: null
 topicFamilyConfidence: null
 kind: project
