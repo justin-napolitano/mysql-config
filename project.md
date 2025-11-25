@@ -7,8 +7,8 @@ githubUrl: https://github.com/justin-napolitano/mysql-config
 generatedAt: '2025-11-24T21:35:38.633Z'
 source: github-auto
 summary: >-
-  A repository of SQL scripts and configurations for managing a MySQL server
-  tailored for personal website databases.
+  A repository of SQL scripts and configurations for managing a MySQL server tailored for personal
+  website databases.
 tags:
   - mysql
   - ubuntu
@@ -20,8 +20,8 @@ seoSecondaryKeywords:
   - user management in mysql
   - personal website database
 seoOptimized: true
-topicFamily: null
-topicFamilyConfidence: null
+topicFamily: automation
+topicFamilyConfidence: 0.9
 kind: project
 entryLayout: project
 showInProjects: true
@@ -110,4 +110,5 @@ mysql-config/
 - Include sample data insertion scripts
 - Integrate with application-level code for seamless deployment
 - Add support for other environments beyond Ubuntu
+
 
